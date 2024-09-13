@@ -1,12 +1,12 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-weight: 200;
-    background-color: #003049;
-    color: #FDF0D5;
+    background-color: #373737;
+    color: #dcdcdc;
 }
 
 body img {
-    transition: .2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 }
 
 img:hover {
@@ -28,7 +28,7 @@ img:hover {
 
 .div-line {
     grid-area: line;
-    border-bottom: 2px solid #FDF0D5;
+    border-bottom: 2px solid #dcdcdc;
     width: 100%;
 }
 
@@ -48,7 +48,7 @@ img:hover {
     padding: 5px;
     grid-area: bio;
     margin: auto;
-    border-bottom: 1px solid #FDF0D5;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .div-links {
@@ -74,10 +74,10 @@ img:hover {
 .grid-container {
     display: grid;
     grid-template-areas:
-        'name header'
-        'line line'
-        'photo bio'
-        'photo links';
+        "name header"
+        "line line"
+        "photo bio"
+        "photo links";
     grid-template-columns: 25% auto;
     grid-row-gap: 2px;
     gap: 12px;
@@ -94,32 +94,63 @@ p.indent {
     font-weight: 500;
 }
 
+.shift {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
 a {
     text-decoration: none;
     transition: color ease-in-out 0.2s;
-    color: #669BBC;
+    color: #dcdcdc;
     font-weight: 500;
 }
 
 a:hover {
-    color: #C1121F;
+    color: #c1121f;
 }
 
-@media screen and (max-width: 600px){
-    .grid-container{
+svg {
+    stroke: #dcdcdc;
+    transition: 0.2s all ease-in-out;
+    padding: 6px;
+    width: 24px;
+    height: 24px;
+    transform: scale(1.15);
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+svg:hover {
+    stroke: #c1121f;
+    transform: scale(1.25);
+}
+
+svg.semantic-scholar {
+    width: 36px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
         max-width: 400px;
         grid-template-areas:
-            'name'
-            'header'
-            'line'
-            'photo'
-            'bio'
-            'links';
+            "name"
+            "header"
+            "line"
+            "photo"
+            "bio"
+            "links";
         grid-template-columns: 100%;
         gap: 2px;
     }
 
     .div-photo:hover img {
-        transform: scale(1.00);
+        transform: scale(1);
+    }
+
+    .div-photo img {
+        width: 70%;
     }
 }
